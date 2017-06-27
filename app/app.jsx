@@ -1,7 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 var Main = require('Main');
+var Timer = require('Timer');
+var Clock = require('Clock');
+var CountDown = require('CountDown');
 
 //load foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -14,8 +18,8 @@ ReactDOM.render(
   <Router history={history}>
     <Main>
       <Switch>
-        {/* <Route exact path="/" component={Weather}/> */}
-        {/* <Route path="/about" component={About}/> */}
+        <Route exact path="/" component={Timer}/>
+        <Route path="/countdown" component={CountDown}/>
       </Switch>
     </Main>
   </Router>,
